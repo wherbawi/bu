@@ -6,8 +6,9 @@ public class Fish extends Animal {
 		super(x, y);
 	}
 
+	@Override
 	public String toString() {
-		return super.toString() + "this is a fish";
+		return "Fish [getX()=" + getX() + ", getY()=" + getY() + "]";
 	}
 
 }

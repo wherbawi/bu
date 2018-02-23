@@ -12,6 +12,10 @@ public class Cat extends Animal {
 
 	}
 
+	public void attack() {
+		setY(getY() + 15);
+	}
+
 	public String toString() {
 		return "this is a cat at pos" + getX() + "," + getY();
 	}
