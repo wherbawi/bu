@@ -10,6 +10,7 @@ public class Animal {
 		this.y = y;
 	}
 
+
 	public void moveRight() {
 		x = x + 5;
 	}
@@ -28,6 +29,11 @@ public class Animal {
 
 	public void setY(int y) {
 		this.y = y;
+	}
+
+	@Override
+	public String toString() {
+		return "Animal [x=" + x + ", y=" + y + "]";
 	}
 
 }

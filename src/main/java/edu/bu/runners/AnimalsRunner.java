@@ -12,10 +12,10 @@ public class AnimalsRunner {
 		ArrayList<Animal> animals = new ArrayList<>();
 		animals.add(new Cat(10, 10));
 		animals.add(new Fish(10, 10));
+		int ix = 16;
 		for (Animal animal : animals) {
 			System.out.println(animal);
 		}
-
 		for (int i = 0; i < animals.size(); i++) {
 			System.out.println(animals.get(i));
 
