@@ -1,5 +1,6 @@
 package edu.bu.runners;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Calaculator {
@@ -24,13 +25,19 @@ public class Calaculator {
 				System.out.println("this is the finally block");
 			}
 
+			try {
+				divide(1, 2);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 
 		// System.out.println(result);
 
 	}
 
-	private static int divide(int a, int b) {
+	private static int divide(int a, int b) throws IOException {
 		if (b == 0)
 			throw new IllegalArgumentException("B cannot be 0");
 		if (a > 1000)
