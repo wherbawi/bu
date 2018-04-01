@@ -13,31 +13,22 @@ public class Calaculator {
 			System.out.println("enter  a, b");
 			a = scanner.nextInt();
 			b = scanner.nextInt();
+
 			try {
+
 				result = divide(a, b);
 				System.out.println(result);
-
-			} catch (IllegalArgumentException e) {
-				System.out.println("Please try again" + e.getMessage());
 			} catch (Exception e) {
-				System.out.println("This is catch block 2" + e.getMessage());
-			} finally {
-				System.out.println("this is the finally block");
-			}
-
-			try {
-				divide(1, 2);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+
 		}
 
 		// System.out.println(result);
 
 	}
 
-	private static int divide(int a, int b) throws IOException {
+	private static int divide(int a, int b) {
 		if (b == 0)
 			throw new IllegalArgumentException("B cannot be 0");
 		if (a > 1000)

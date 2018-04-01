@@ -1,6 +1,6 @@
 package edu.bu.domain;
 
-public class Person {
+public class Person implements Comparable<Person>{
 	private String name;
 
 	public Person(String name) {
@@ -44,6 +44,11 @@ public class Person {
 		} else if (!name.equals(other.name))
 			return false;
 		return true;
+	}
+
+	@Override
+	public int compareTo(Person o) {
+		return 0;
 	}
 
 	
