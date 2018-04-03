@@ -8,25 +8,24 @@ import edu.bu.domain.House;
 
 public class ComparablesTester {
 	public static void main(String[] a) {
-		List<Comparables> houses = new ArrayList<>();
+		List<Comparables<House>> houses = new ArrayList<>();
 		houses.add(new House(10));
 		houses.add(new House(20));
 
-		List<Comparables> cars = new ArrayList<>();
+		List<Comparables<Car>> cars = new ArrayList<>();
 		cars.add(new Car(50));
 		cars.add(new Car(440));
-		cars.add(new House(2222));
 
 		Object max = getMax(cars);
 
-		Object max2 = getMax(houses);
-		System.out.println(max2);
+		// Object max2 = getMax(houses);
+		// System.out.println(max2);
 		System.out.println(max);
 	}
 
-	private static Object getMax(List<Comparables> coms) {
+	private static Object getMax(List<Comparables<Car>> cars) {
 		Comparables max = null;
-		for (Comparables comparable : coms) {
+		for (Comparables comparable : cars) {
 			if (max == null || max.compare(comparable) < 0)
 				max = comparable;
 		}

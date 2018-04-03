@@ -1,6 +1,6 @@
 package edu.bu.domain;
 
-public class House implements Comparables {
+public class House implements Comparables<House> {
 	private int area;
 
 	public House(int area) {
@@ -10,9 +10,9 @@ public class House implements Comparables {
 
 	// - if area< other.area, 0 if both equal, + if area>other.area
 	@Override
-	public int compare(Object o) {
+	public int compare(House o) {
 
-		return area - ((House) o).area;
+		return area - o.area;
 	}
 
 	@Override

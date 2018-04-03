@@ -1,5 +1,5 @@
 package edu.bu.domain;
 
-public interface Comparables {
-	public int compare(Object o);
+public interface Comparables<E>{
+	public int compare(E o);
 }
