@@ -1,8 +1,6 @@
 package edu.bu.runners;
 
-import edu.bu.domain.Comparables;
-
-public class Car implements Comparables<Car> {
+public class Car implements Comparable<Car> {
 	private int speed;
 
 	public Car(int speed) {
@@ -24,7 +22,7 @@ public class Car implements Comparables<Car> {
 	}
 
 	@Override
-	public int compare(Car o) {
+	public int compareTo(Car o) {
 
 		return speed - o.speed;
 	}

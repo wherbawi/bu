@@ -1,6 +1,9 @@
 package edu.bu.domain;
 
 public class Cat extends Animal {
+	public Cat() {
+
+	}
 
 	public Cat(int x, int y) {
 		super(x, y);
