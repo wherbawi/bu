@@ -3,8 +3,7 @@ package edu.bu.runners;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
-
+import edu.bu.domain.Car;
 import edu.bu.domain.Comparables;
 import edu.bu.domain.House;
 

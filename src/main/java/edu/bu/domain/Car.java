@@ -1,4 +1,4 @@
-package edu.bu.runners;
+package edu.bu.domain;
 
 public class Car implements Comparable<Car> {
 	private int speed;

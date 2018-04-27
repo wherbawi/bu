@@ -9,10 +9,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
 import edu.bu.domain.Cat;
+import edu.bu.domain.Sound;
 
 public class JsonExample {
 	public static void main(String[] a) throws IOException {
-		Cat cat = new Cat(1, 2);
+		Cat cat = new Cat(1, 2, new Sound(10));
 		ObjectMapper om = new ObjectMapper();
 		String jsonString = om.writeValueAsString(cat);
 		System.out.println(jsonString);
@@ -20,7 +21,7 @@ public class JsonExample {
 		System.out.println(readValue);
  
 		List<Cat> cats = new ArrayList<>();
-		cats.add(new Cat(15, 20));
+		cats.add(new Cat(15, 20, new Sound(20)));
 		cats.add(new Cat(150, 200));
 
 		try {
