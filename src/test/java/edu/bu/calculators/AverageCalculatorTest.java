@@ -12,7 +12,7 @@ import org.junit.Test;
 public class AverageCalculatorTest {
 	@Test(expected = IllegalArgumentException.class)
 	public void testGetAverage_expectIAE() {
-		List<Double> numbers = Arrays.asList(12d);
+		List<Double> numbers = Arrays.asList();
 		AverageCalculator averageCalculator = new AverageCalculator();
 		averageCalculator.calcAverage(numbers);
 
@@ -20,11 +20,11 @@ public class AverageCalculatorTest {
 
 	public void testGetAveragePositive() {
 		List<Double> numbers = Arrays.asList(10d, 20d, 30d);
-		AverageCalculator averageCalculator = new AverageCalculator();
+		AverageCalculator cut = new AverageCalculator();
 		SumCalculator mockSumCalculator = mock(SumCalculator.class);
 		when(mockSumCalculator.sum(anyList())).thenReturn(60d);
-		averageCalculator.setSumCalculator(mockSumCalculator);
-		double result = averageCalculator.calcAverage(numbers);
+		cut.setSumCalculator(mockSumCalculator);
+		double result = cut.calcAverage(numbers);
 		assertEquals("wrong average", 20, result, 0);
 
 	}
